@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Suitmedia</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="next">next</string>
+    <string name="masukan_nama">masukkan nama</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="nama">Nama</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="pilih_event">pilih event</string>
+    <string name="pilih_guest">pilih guest</string>
+    <string name="title_activity_event">Event</string>
+    <string name="title_activity_guest">Guest</string>
+
+</resources>
