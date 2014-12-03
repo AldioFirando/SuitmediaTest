@@ -10,7 +10,8 @@
     <string name="nama">Nama</string>
     <string name="tanggal">Tanggal</string>
     <string name="pilih_event">pilih event</string>
-    <string name="pilih_guest">pilih guest</string>
+    <string name="pilih_guest_1">pilih guest 1</string>
+    <string name="pilih_guest_2">pilih guest 2</string>
     <string name="title_activity_event">Event</string>
     <string name="title_activity_guest">Guest</string>
 
