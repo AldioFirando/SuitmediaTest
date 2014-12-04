@@ -50,22 +50,16 @@ public class Profile extends Activity implements OnClickListener{
 		Intent data = getIntent(); 
 		Bundle paket = data.getExtras();
 		String nama = paket.getString("name");
-		String[] sWord = nama.split(" ");
-		if(sWord.length == 2){
-			String s = sWord[1];
 			String r = "";
-			int length = s.length();
+			int length = nama.length();
 			for( int i = length - 1 ; i >= 0 ; i-- ) {
-				r = r + s.charAt(i);
+				r = r + nama.charAt(i);
 			}
-			if(sWord[0].equals(r)){
+			if(nama.equals(r)){
 				tv.setText("Mirror Words");
 			}else{
 				tv.setText(nama);
 			}
-		}else{
-			tv.setText(nama);
-		}
 	}
 
 	@Override
@@ -104,11 +98,15 @@ public class Profile extends Activity implements OnClickListener{
 			if(resultCode == RESULT_OK){
 				int result = data.getIntExtra("result", 0);
 				String longdate = TempGuestItem.listGuest.get(result).getBirthdate().toString();
-				int date = Integer.parseInt(longdate.substring(6, 7));
-				if(date % 2 == 0){
-					btnGuest1.setText("Genap");
+				int date = Integer.parseInt(longdate.substring(8, 10));
+				if(date % 2 == 0  && date % 3 == 0) {
+					btnGuest1.setText("iOS");
+				}else if(date % 2 == 0){
+					btnGuest1.setText("Blackberry");
+				}else if(date % 3 == 0){
+					btnGuest1.setText("Android");
 				}else{
-					btnGuest1.setText("Ganjil");
+					btnGuest1.setText("Phone");
 				}
 			}
 		}else if(requestCode == 3) {

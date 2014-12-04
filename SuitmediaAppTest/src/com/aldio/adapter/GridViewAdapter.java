@@ -3,8 +3,10 @@ package com.aldio.adapter;
 import com.aldio.suitmediaapptest.R;
 import com.aldio.util.TempGuestItem;
 
+import android.R.color;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,9 +54,12 @@ public class GridViewAdapter extends BaseAdapter {
 			date = (TextView) row.findViewById(R.id.itemDate);
 		}
 		
+		row.setBackgroundColor(Color.parseColor(color[position]));
 		name.setText(TempGuestItem.listGuest.get(position).getName().toString());
 		date.setText(TempGuestItem.listGuest.get(position).getBirthdate().toString());
 		return row;
 	}
+	
+	public String[] color = {"#FF0000","#0000FF","#00FF00","#FFFF00","#00FFFF","#FFA8A8"};
 
 }
